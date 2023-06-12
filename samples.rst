@@ -177,6 +177,19 @@ samples
   - legacy data governance model. 
 - `E54` What should IAM credentials passthrough should be replaced with?
   - Unity Catalog which simplifies security and governance of your data by providing a central place to administer and audit data access across multiple workspaces in your account.
+- `E55` on the same branch `origin/b` and `b`, there's a different commit to each branch. what happens with `git pull`?
+  - the branches are `divergent` (different stories).
+- `E56` how to reconcile two divergent branches by 1 commit each?
+  - set reconciliation method to `merge` with `git config pull.rebase false`
+  - `git pull`
+  - fix conflicts on file
+  - `git push`
+  - both branches will contain the same story (reconciled): counting from the divergence,
+    remote commits first, then local commits (it were the local commits that fixed the merge)
+- `E57` github create repo from cli?
+  - `gh repo create`
+- 
+
 TODO
 ----
 
